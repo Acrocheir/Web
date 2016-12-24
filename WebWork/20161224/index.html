@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个小帅哥</title>
+    <style>
+        body {
+            font-family: "微软雅黑";
+            font-size: 12px;
+            margin: 0px;
+        }
+        /*头部*/
+        header {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: auto;
+        }
+
+        section aside{
+            float: left;
+            width: 20%;
+            height: 500px;
+            overflow: auto;
+            background-color: cornflowerblue;
+        }
+        section section {
+            float: right;
+            width: 80%;
+            height: 500px; /*JS调整高度，适配不同浏览器尺寸*/
+            overflow: auto; /*超出后出现滚动条*/
+            background-color: antiquewhite;
+        }
+        /*底部*/
+        footer {
+            position: relative;
+            width: 100%;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <section>
+        <aside>左部菜单</aside>
+        <section>主界面</section>
+    </section>
+    <footer></footer>
+</body>
+</html>
