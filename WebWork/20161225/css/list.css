@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body{
+    font-size: 12px;
+}
+
+header {
+    position: relative; /*相对布局*/
+    width: 100%;
+    min-width: 600px;
+}
+
+header ul li {
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+header ul li a {
+    cursor: pointer !important; /*小手形状*/
+}
+
+section {
+    position: relative;
+    width: 90%;
+    min-width: 600px;
+    top: 50px;
+    margin: 0px auto;
+}
+
+section form table tr th,td { /*表格内容居中*/
+    text-align: center;
+}
+
+/*类样式*/
+.input-size {
+    width: 200px; /*加!important为最高优先级*/
+    height: 35px;
+}
+
+.btn-container { /*段落居中*/
+    text-align: center;
+}
+.btn-container input { /*按钮距上10px，之间20px*/
+    margin: 10px 20px;
+}
+
+.form-align { /*搜索靠右*/
+    text-align: right;
+}

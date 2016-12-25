@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OA办公自动化管理</title>
+    <style>
+        body {
+            font-family: "微软雅黑";
+            font-size: 16px;
+            margin: 0px;
+        }
+        /*头部*/
+        header {
+            position: fixed; /*布局 相对*/
+            width: 100%;
+            min-width: 800px; /*最小为800px*/
+            height: 100px;
+            top: 0px; /*距顶部*/
+            z-index: 10;/*属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+            background-color: cornflowerblue;
+        }
+        /*主体部分*/
+        #pageBody {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+        /*左边一部分*/
+        #pageBody aside {
+            float: left;
+            width: 20%;
+            min-width: 200px; /*最小为200*/
+            height: 100%;
+            background-color: lightblue;
+            overflow: auto; /*超出加上滚动条*/
+            padding-top: 100px;
+            box-sizing: border-box; /*不会在父级加高度和宽度，在自己里面扣除*/
+        }
+        /*列表*/
+        #pageBody aside ul {
+            margin: 5px auto;
+            padding: 0px;
+            width: 160px;
+            border-radius: 5px;
+            background-color: #FFF;
+        }
+        /*列表项*/
+        #pageBody aside ul li {
+            list-style-type: none; /*去掉前面的那个点*/
+            height: 30px;
+            margin: 2px 0px;
+        }
+        #pageBody aside ul li a {
+            float: left;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 30px;
+            color: #000;
+            text-decoration: none;
+        }
+        #pageBody aside ul li a:hover { /*鼠标指向效果*/
+            background-color: lightgray;
+            color: #FFF;
+        }
+        #pageBody aside ul li a[class=active]:hover { /*鼠标指向效果,筛选出class为active的*/
+            background-color: cornflowerblue;
+            color: #000;
+        }
+        /*右边部分*/
+        #pageBody section {
+            float: right;
+            width: 80%;
+            height: 100%;
+            background-color: antiquewhite;
+            overflow: auto;
+            padding-top: 100px;
+            overflow: hidden; /*超出隐藏滚动条*/
+        }
+        /*底部*/
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 10px;
+            bottom: 0px;
+            left: 0px;
+            z-index: 10;
+            background-color: cornflowerblue;
+        }
+        /*类样式*/
+        .logo { /*头像*/
+            position: absolute; /*布局 绝对*/
+            width: 70px;
+            height: 70px;
+            top: 15px; /*距离上部*/
+            left: 60px;
+            background-color: bisque;
+        }
+        .header-title { /*标题*/
+            position: absolute;
+            width: 200px;
+            top: 40px;
+            left: 150px;
+            font-size: 14px;
+            color: #FFF;
+        }
+        /*关闭按钮*/
+        .btn-close {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+            line-height: 30px;
+            background-color: antiquewhite;
+            cursor: pointer; /*可点击*/
+            border-radius: 5px; /*圆角*/
+        }
+        .btn-close:hover {
+            background-color: coral;
+            color: #FFF;
+            box-shadow: #000 ;
+        }
+        /*左部菜单项*/
+        .active {
+            background-color: cornflowerblue;
+            border-top-left-radius: 5px; /*左上角是圆角*/
+            border-top-right-radius: 5px;
+        }
+    </style>
+    <!--js脚本-->
+    <script>
+        /* *打开或关闭菜单*/
+        function openOrCloseMenu(thisZ) {
+            /*父节点ID*/
+            var parentId = thisZ.id;
+            /*获得所有子节点*/
+            var subNodes = document.getElementsByName(parentId);
+            //alert(subNodes);/*打印输出,提示*/
+            /*判断是否存在子节点*/
+            if(subNodes.length<1) {
+                return;
+            }
+            /*判断显示属性*/
+            if(subNodes[0].style.display=="none") { /*判断是否隐藏，关闭状态*/
+                /*循环修改属性*/
+                for(i=0; i<subNodes.length; i++) {
+                    subNodes[i].style.display = "block";/*隐藏就显示，打开状态*/
+                }
+            } else {
+                for(i=0; i<subNodes.length; i++) {
+                    subNodes[i].style.display = "none";
+                    /*隐藏就显示，打开状态*/
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!--段落或一段文本-->
+        <article class="logo"><img src="img/touxiang.png" width="70px" height="70px"></article><!--放一张图-->
+        <article class="header-title">SE-OA办公自动化管理</article>
+        <article class="btn-close" onclick="location.href='login.html'">注销</article>
+    </header>
+    <section id="pageBody">
+        <aside>
+            <!--无序列表，用于制作导航菜单-->
+            <ul><!--unorder list-->
+                <li id="001" onclick="openOrCloseMenu(this)"><a href="#" class="active">系统管理</a></li> <!--list item-->
+                <li name="001"><a href="pages/user/userlist.html" target="mainFrame">用户管理</a></li>
+                <li name="001"><a href="pages/dept/deptlist.html" target="mainFrame">部门管理</a></li>
+                <li name="001"><a href="pages/posit/positlist.html" target="mainFrame">职位管理</a></li>
+                <li name="001"><a href="pages/role/rolelist.html" target="mainFrame">角色管理</a></li>
+                <li id="002" onclick="openOrCloseMenu(this)"><a href="#" class="active">邮件管理</a></li>
+                <li name="002"><a href="#">发送邮件</a></li>
+                <li name="002"><a href="#">未读邮件</a></li>
+                <li name="002"><a href="#">所有邮件</a></li>
+            </ul>
+        </aside>
+        <section>
+            <!--id name 一样为了兼容性-->
+            <iframe src="main.html" id="mainFrame" name="mainFrame" width="100%" height="100%"
+                    frameborder="no"/>
+        </section>
+    </section>
+    <footer></footer>
+</body>
+</html>

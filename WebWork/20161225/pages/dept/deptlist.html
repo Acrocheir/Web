@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--引入样式表css-->
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/list.css"/>
+</head>
+<body>
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="javascript:void(0);">部门管理</a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <article>
+            <form id="form1" name="form1" method="post" action=""
+                  class="form-inline form-group form-align ">
+                <input type="input" id="deptName" name="deptName" placeholder="请输入部门名称"
+                       class="form-control input-size "/>
+                <input type="submit" value="查询" class="btn btn-warning"/>
+            </form>
+        </article>
+        <form id="form2" name="form2" method="post" action="">
+            <table class="table table-bordered">
+                <tr>
+                    <th><input type="checkbox" id="idAll"/></th>
+                    <th>序号</th>
+                    <th>部门名称</th>
+                    <th>成立时间</th>
+                    <th>部门经理</th>
+                    <th>操作时间</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="id1"/></th>
+                    <th>1</th>
+                    <th>财务部</th>
+                    <th>2013-05-16</th>
+                    <th>小赵</th>
+                    <th>2016-12-05</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="id2"/></th>
+                    <th>2</th>
+                    <th>秘书部</th>
+                    <th>2013-06-15</th>
+                    <th>小钱</th>
+                    <th>2016-11-16</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" id="id3"/></th>
+                    <th>3</th>
+                    <th>外联部</th>
+                    <th>2013-11-15</th>
+                    <th>小孙</th>
+                    <th>2016-12-05</th>
+                </tr>
+            </table>
+            <p class="btn-container">
+                <input type="button" value="添 加" class="btn btn-primary btn-sm"/>
+                <input type="button" value="修 改" class="btn btn-warning btn-sm"/>
+                <input type="button" value="删 除" class="btn btn-danger btn-sm"/>
+            </p>
+        </form>
+    </section>
+</body>
+</html>

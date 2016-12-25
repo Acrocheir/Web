@@ -1,0 +1,60 @@
+@charset "UTF-8";
+body{
+    font-size: 12px;
+}
+
+header {
+    position: relative; /*相对布局*/
+    width: 100%;
+    min-width: 600px;
+}
+
+header ul li {
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+header ul li a {
+    cursor: pointer !important; /*小手形状*/
+}
+
+section {
+    position: relative;
+    width: 500px;
+    top: 50px;
+    margin: 0px auto;
+    border: solid 1px lightgrey; /*灰色框*/
+    border-radius: 10px;
+}
+
+section dl {
+    margin: 20px 0px; /*上下 左右*/
+}
+
+section dl dt {
+    width: 460px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px gray;
+    font-size: 16px;
+    text-indent: 10px; /*首行缩进*/
+    letter-spacing: 3px;
+}
+
+section dl dd {
+    width: 300px;
+    margin: 20px 100px;
+}
+
+.input-radio {
+    margin-left: 50px !important;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn-container input {
+    margin: 10px 20px 0px;
+}
