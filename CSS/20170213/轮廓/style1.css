@@ -1,0 +1,5 @@
+p{
+  outline-width: 20px; /*线的粗细为20px*/
+  outline-color: aqua;
+  outline-style: dotted; /*虚线效果*/
+}

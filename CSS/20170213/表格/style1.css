@@ -1,0 +1,28 @@
+/*
+#tb,tr,th,td{ !*都加上边框*!
+    border: 1px solid cornflowerblue;
+    text-align: center;
+}
+#tb{
+    width: 400px;
+    height: 400px;;
+    border-collapse: collapse; !*里面的边框重叠*!
+}*/
+
+#tb{
+    border-collapse: collapse;
+    width: 500px;
+}
+#tb td,#tb th{
+    border: 1px solid skyblue;
+    padding: 5px;
+}
+#tb th{
+    text-align: right;
+    background-color: aqua;
+    color: #FFFFFF;
+}
+#tb tr.class td{
+    color: black;
+    background-color: aquamarine;
+}

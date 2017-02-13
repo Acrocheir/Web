@@ -1,0 +1,10 @@
+a:link{
+    color: #FF0000; /*未被点击*/
+    text-decoration: none; /*无下划线*/
+}
+a:visited{
+    color: chartreuse;/*被点击过*/
+}
+a:hover{
+    color: aqua;/*鼠标放上去*/
+}
