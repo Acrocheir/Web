@@ -1,0 +1,27 @@
+/*背景颜色*/
+/*
+body{
+    background-color: aqua;
+}
+p{
+    width:150px;
+    padding: 10px; !*内边距*!
+    background-color: chartreuse;
+}*/
+
+/*背景图片*/
+/*
+body{
+    background-image: url("images.jpg");
+}*/
+
+/*设置图片是否重复*/
+body{
+    background-image: url("images.jpg");
+    background-repeat: no-repeat; /*不允许重复*/
+    /*从哪个地方开始显示，从图片的顶部开始显示
+      也可以用background-position: 100px 100px; 距离100px显示*/
+    background-position: center top;
+    /*图片不随滚动条滚动*/
+    background-attachment: fixed;
+}

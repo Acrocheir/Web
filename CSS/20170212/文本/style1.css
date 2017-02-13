@@ -1,0 +1,28 @@
+body{
+    color:black; /*颜色*/
+    /*text-align: center; !*对齐方式*!*/
+
+}
+h5{
+    text-indent: 1.5em; /*首行缩进，也可以是百分数*/
+}
+/*有关字母的样式*/
+#p1{
+    text-transform: capitalize; /*首字母大写*/
+}
+#p2{
+    text-transform: lowercase; /*都小写*/
+}
+#p3{
+    text-transform: uppercase; /*都大写*/
+}
+/*阴影效果*/
+#p4{
+    text-shadow: 5px 5px 0px #FF0000; /*距左 距上 清晰度（小越清晰） 颜色*/
+}
+
+/*自动换行*/
+#p5{
+    width: 100px;
+    text-wrap: normal;
+}
