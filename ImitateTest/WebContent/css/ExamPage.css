@@ -1,0 +1,83 @@
+body,div,p,h3,h4,h5,ul,li,lable {
+    margin: 0;
+    padding: 0;
+}
+
+/*中间放题部分的布局*/
+body>div>div {
+    text-align: center;
+    position: relative;
+    width: 800px;
+    height: 310px;
+    margin: 80px auto 0px;
+    border-radius: 10px;
+    background-color: #d2f7ff;
+}
+
+/*第i题*/
+div>div>h3 {
+    line-height: 70px;
+    letter-spacing: 7px;
+}
+
+body>div>p {
+    height: 35px;
+    margin-top: 40px;
+}
+
+/*按钮*/
+div>p>input,button {
+    color: white;
+    border-radius: 5px;
+    background-color: #82b87c;
+}
+
+/* 上一题按钮 */
+div>p> .sub_up {
+	width: 75px;
+    height: 35px;
+    margin-left: 500px;
+}
+
+/*下一题按钮*/
+div>p> .sub_down {
+	width: 75px;
+    height: 35px;
+    margin-left: 60px;
+}
+
+/* 提交考试结果按钮 */
+div>p> .sub_submit {
+	width: 100px;
+    height: 40px;
+    text-align: center;
+	margin-left: 80px;
+}
+
+div>p>button:hover {
+    cursor: pointer;
+    box-shadow: #02ac05 0px 0px 10px;
+}
+div>p>input:hover {
+    cursor: pointer;
+    box-shadow: #02ac05 0px 0px 10px;
+}
+
+.options{
+    margin-left: 180px;
+    width: 460px;
+}
+
+/*ABCD选项*/
+.options>li {
+    margin-left: 2em;
+    list-style-type: upper-alpha;
+    list-style-position: outside;
+    text-align: left;
+    padding: 6px 0;
+}
+
+form>h4>label {
+	background-attachment: fixed;
+}
+
